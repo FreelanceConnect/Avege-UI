@@ -1,110 +1,226 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>FADHIL</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="icons/fonts/remixicon.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="header">
-		<div class="boxhead">
-			<div class="formwicon start-round">
-				<i class="ri-map-pin-line"></i>
-				<input type="text" name="ville" class="form f1" value="Douala, Cameroun">
-			</div>
-			<i class="ri-arrow-left-right-fill change"></i>
-			<div class="formwicon">
-				<i class="ri-map-pin-line"></i>
-				<input type="text" name="ville" class="form f1" value="Yaoundé, Cameroun">
-			</div>
-			<div class="formwicon">
-				<i class="ri-calendar-2-line"></i>
-				<input type="text" name="ville" class="form f2" value="Lun. 20 Nov">
-			</div>
-			<div class="formwicon">
-				<i class="ri-calendar-2-line"></i>
-				<input type="text" name="ville" class="form f1" value="Ajouter un retour">
-			</div>
-			<div class="formwicon end-round">
-				<i class="ri-group-line"></i>
-				<input type="text" name="ville" class="form f3" value="01 place">
-			</div>
-			<button class="btn btn-search">Rechercher</button>
-		</div>
-	</div>
+    <head>
+        <title>FADHIL</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="icons/fonts/remixicon.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="boxhead">
+                <div class="formwicon start-round">
+                    <i class="ri-map-pin-line"></i>
+                    <input type="text" name="ville" class="form f1" placeholder="Ville De Départ" />
+                </div>
+                <i class="ri-arrow-left-right-fill change"></i>
+                <div class="formwicon">
+                    <i class="ri-map-pin-line"></i>
+                    <input type="text" name="ville" class="form f1" placeholder="Ville De Destination" />
+                </div>
+                <div class="formwicon">
+                    <i class="ri-calendar-2-line"></i>
+                    <input type="text" name="ville" class="form f2" placeholder="Date Aller" />
+                </div>
+                <div class="formwicon">
+                    <i class="ri-calendar-2-line"></i>
+                    <input type="text" name="ville" class="form f1" placeholder="Date Retour" />
+                </div>
+                <div class="formwicon end-round">
+                    <i class="ri-group-line"></i>
+                    <input type="text" name="ville" class="form f3" placeholder="Places" />
+                </div>
+                <button class="btn btn-search">Rechercher</button>
+            </div>
+        </div>
 
-	<div class="main">
-		<div class="content">
-			<nav>
-				<a href="#" class="active"><i class="ri-flashlight-fill"></i> Tous</a>
-				<a href="#"><i class="ri-sun-foggy-fill"></i> Matin</a>
-				<a href="#"><i class="ri-sun-fill"></i> Midi</a>
-				<a href="#"><i class="ri-moon-fill"></i> Soir</a>
-			</nav>
-			<div class="selectbox">
-				<select class="form-select">
-					<option>Prix</option>
-				</select>
-				<select class="form-select">
-					<option>Agence</option>
-				</select>
-				<select class="form-select">
-					<option>Lieu de depart</option>
-				</select>
-			</div>
-			<h2>Nous avons trouvé <span class="yellow">09</span> voyages disponible</h2>
+        <div class="main">
+            <div class="content">
+                <nav>
+                    <a data-toggle="tab" href="#tous" class="active"><i class="ri-flashlight-fill"></i> Tous</a>
+                    <a data-toggle="tab" href="#matin"><i class="ri-sun-foggy-fill"></i> Matin</a>
+                    <a data-toggle="tab" href="#midi"><i class="ri-sun-fill"></i> Midi</a>
+                    <a href="#" data-toggle="tab" href="#soir"><i class="ri-moon-fill"></i> Soir</a>
+                </nav>
+                <div class="selectbox">
+                    <select class="form-select">
+                        <option>Prix</option>
+                    </select>
+                    <select class="form-select">
+                        <option>Agence</option>
+                    </select>
+                    <select class="form-select">
+                        <option>Lieu de depart</option>
+                    </select>
+                </div>
+                <h2>Nous avons trouvé <span class="yellow">03</span> voyages disponible</h2>
 
-			<div class="boxitem">
-				<div class="hbox">
-					<div class="logo"><img src="m.png"></div>
-					<div class="nom">Cerise</div>
-					<div class="type">Classique</div>
-				</div>
-				<div class="bodbox">
-					<div class="itemx"><b>04:30</b><br><span class="detail">Douala, Douche Akwa</span></div>
-					<div class="itemx">04h00min</div>
-					<div class="itemx"><b>08:30</b><br><span class="detail">Yaoundé, Mvan</span></div>
-					<div class="itemx"><b class="price">3,500 FCFA</b><br><span class="detail">Allez-simple</span></div>
-				</div>
-				<div class="fbox"><div class="nplace">06 places restantes</div></div>
-			</div>
+                <div id="tous" class="tab-pane fade in active">
+                    <div class="boxitem">
+                        <div class="hbox">
+                            <div class="logo"><img src="m.png" /></div>
+                            <div class="nom">Cerise</div>
+                            <div class="type">Classique</div>
+                        </div>
+                        <div class="bodbox">
+                            <div class="itemx">
+                                <b>04:30</b><br />
+                                <span class="detail">Douala, Douche Akwa</span>
+                            </div>
+                            <div class="itemx">04h00min</div>
+                            <div class="itemx">
+                                <b>08:30</b><br />
+                                <span class="detail">Yaoundé, Mvan</span>
+                            </div>
+                            <div class="itemx">
+                                <b class="price">3,500 FCFA</b><br />
+                                <span class="detail">Allez-simple</span>
+                            </div>
+                        </div>
+                        <div class="fbox"><div class="nplace">06 places restantes</div></div>
+                    </div>
 
-			<div class="boxitem">
-				<div class="hbox">
-					<div class="logo"><img src="m.png"></div>
-					<div class="nom">Cerise </div>
-					<div class="type">Classique</div>
-				</div>
-				<div class="bodbox">
-					<div class="itemx"><b>04:30</b><br><span class="detail">Douala, Douche Akwa</span></div>
-					<div class="itemx">04h00min</div>
-					<div class="itemx"><b>08:30</b><br><span class="detail">Yaoundé, Mvan</span></div>
-					<div class="itemx"><b class="price">3,500 FCFA</b><br><span class="detail">Allez-simple</span></div>
-				</div>
-				<div class="fbox"><div class="nplace">06 places restantes</div></div>
-			</div>
+                    <div class="boxitem">
+                        <div class="hbox">
+                            <div class="logo"><img src="m.png" /></div>
+                            <div class="nom">Cerise</div>
+                            <div class="type">Classique</div>
+                        </div>
+                        <div class="bodbox">
+                            <div class="itemx">
+                                <b>14:30</b><br />
+                                <span class="detail">Douala, Douche Akwa</span>
+                            </div>
+                            <div class="itemx">14h00min</div>
+                            <div class="itemx">
+                                <b>08:30</b><br />
+                                <span class="detail">Yaoundé, Mvan</span>
+                            </div>
+                            <div class="itemx">
+                                <b class="price">3,500 FCFA</b><br />
+                                <span class="detail">Allez-simple</span>
+                            </div>
+                        </div>
+                        <div class="fbox"><div class="nplace">06 places restantes</div></div>
+                    </div>
 
-			<div class="boxitem">
-				<div class="hbox">
-					<div class="logo"><img src="m.png"></div>
-					<div class="nom">Cerise</div>
-					<div class="type">Classique</div>
-				</div>
-				<div class="bodbox">
-					<div class="itemx"><b>04:30</b><br><span class="detail">Douala, Douche Akwa</span></div>
-					<div class="itemx">04h00min</div>
-					<div class="itemx"><b>08:30</b><br><span class="detail">Yaoundé, Mvan</span></div>
-					<div class="itemx"><b class="price">3,500 FCFA</b><br><span class="detail">Allez-simple</span></div>
-				</div>
-				<div class="fbox"><div class="nplace">06 places restantes</div></div>
-			</div>
+                    <div class="boxitem">
+                        <div class="hbox">
+                            <div class="logo"><img src="m.png" /></div>
+                            <div class="nom">Cerise</div>
+                            <div class="type">Classique</div>
+                        </div>
+                        <div class="bodbox">
+                            <div class="itemx">
+                                <b>20:30</b><br />
+                                <span class="detail">Douala, Douche Akwa</span>
+                            </div>
+                            <div class="itemx">20h00min</div>
+                            <div class="itemx">
+                                <b>08:30</b><br />
+                                <span class="detail">Yaoundé, Mvan</span>
+                            </div>
+                            <div class="itemx">
+                                <b class="price">3,500 FCFA</b><br />
+                                <span class="detail">Allez-simple</span>
+                            </div>
+                        </div>
+                        <div class="fbox"><div class="nplace">06 places restantes</div></div>
+                    </div>
+                </div>
 
-		</div>
-		<div class="map">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7702627.537759602!2d10.54764913746082!3d2.904629616802164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x1061128be2e1fe6d%3A0x92daa1444781c48b!2sDouala!3m2!1d4.0510564!2d9.7678687!4m5!1s0x108bcf7a309a7977%3A0x7f54bad35e693c51!2zWWFvdW5kw6k!3m2!1d3.8616853!2d11.5202292!5e0!3m2!1sfr!2scm!4v1710338207264!5m2!1sfr!2scm" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-		</div>
-	</div>
-</body>
+                <div id="matin" class="tab-pane fade in">
+                    <div class="boxitem">
+                        <div class="hbox">
+                            <div class="logo"><img src="m.png" /></div>
+                            <div class="nom">Cerise</div>
+                            <div class="type">Classique</div>
+                        </div>
+                        <div class="bodbox">
+                            <div class="itemx">
+                                <b>04:30</b><br />
+                                <span class="detail">Douala, Douche Akwa</span>
+                            </div>
+                            <div class="itemx">04h00min</div>
+                            <div class="itemx">
+                                <b>08:30</b><br />
+                                <span class="detail">Yaoundé, Mvan</span>
+                            </div>
+                            <div class="itemx">
+                                <b class="price">3,500 FCFA</b><br />
+                                <span class="detail">Allez-simple</span>
+                            </div>
+                        </div>
+                        <div class="fbox"><div class="nplace">06 places restantes</div></div>
+                    </div>
+                </div>
+                <div id="midi" class="tab-pane fade in">
+                    <div class="boxitem">
+                        <div class="hbox">
+                            <div class="logo"><img src="m.png" /></div>
+                            <div class="nom">Cerise</div>
+                            <div class="type">Classique</div>
+                        </div>
+                        <div class="bodbox">
+                            <div class="itemx">
+                                <b>14:30</b><br />
+                                <span class="detail">Douala, Douche Akwa</span>
+                            </div>
+                            <div class="itemx">14h00min</div>
+                            <div class="itemx">
+                                <b>08:30</b><br />
+                                <span class="detail">Yaoundé, Mvan</span>
+                            </div>
+                            <div class="itemx">
+                                <b class="price">3,500 FCFA</b><br />
+                                <span class="detail">Allez-simple</span>
+                            </div>
+                        </div>
+                        <div class="fbox"><div class="nplace">06 places restantes</div></div>
+                    </div>
+                </div>
+
+                <div id="soir" class="tab-pane fade in">
+                    <div class="boxitem">
+                        <div class="hbox">
+                            <div class="logo"><img src="m.png" /></div>
+                            <div class="nom">Cerise</div>
+                            <div class="type">Classique</div>
+                        </div>
+                        <div class="bodbox">
+                            <div class="itemx">
+                                <b>20:30</b><br />
+                                <span class="detail">Douala, Douche Akwa</span>
+                            </div>
+                            <div class="itemx">20h00min</div>
+                            <div class="itemx">
+                                <b>08:30</b><br />
+                                <span class="detail">Yaoundé, Mvan</span>
+                            </div>
+                            <div class="itemx">
+                                <b class="price">3,500 FCFA</b><br />
+                                <span class="detail">Allez-simple</span>
+                            </div>
+                        </div>
+                        <div class="fbox"><div class="nplace">06 places restantes</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7702627.537759602!2d10.54764913746082!3d2.904629616802164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x1061128be2e1fe6d%3A0x92daa1444781c48b!2sDouala!3m2!1d4.0510564!2d9.7678687!4m5!1s0x108bcf7a309a7977%3A0x7f54bad35e693c51!2zWWFvdW5kw6k!3m2!1d3.8616853!2d11.5202292!5e0!3m2!1sfr!2scm!4v1710338207264!5m2!1sfr!2scm"
+                    width="600"
+                    height="450"
+                    style="border: 0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+        </div>
+    </body>
 </html>

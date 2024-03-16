@@ -889,6 +889,8 @@ nav a{
 	}
 	
 }
+
+
 @media all and (max-width:380px) {
 	.header {
 		width: 100%;
@@ -940,6 +942,7 @@ nav a{
 	}
 	
 }*/
+
 @media all and (max-width:450px) {
 	.content {
 		width: 90%;
